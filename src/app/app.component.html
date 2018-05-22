@@ -17,4 +17,12 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-
+<hr>
+<input type="number" [(ngModel)]="num" />
+<button (click)="add()">+</button>
+<button (click)="minus()">-</button>
+<br>
+<br>
+<div style="width:100px;height:100px" [@state]="state" (@state.done)="state = 'n/a'">{{ num }}</div>
+<br>
+<br> {{state}}
